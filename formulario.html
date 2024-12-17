@@ -4,115 +4,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario de Reclamo</title>
-  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/formulario.css">
 </head>
 <body>
-  <div class="form-container">
+  <div class="formulario-container">
     <!-- Botones Cerrar y Volver -->
-    <div class="top-buttons">
-      <a href="index.html" class="btn-link">Cerrar</a>
-      <a href="opciones.html" class="btn-link">Volver</a>
+    <div class="formulario-top-buttons">
+      <a href="index.html" class="formulario-btn-link">Cerrar</a>
+      <a href="opciones.html" class="formulario-btn-link">Volver</a>
     </div>
 
     <!-- Logo -->
-    <div class="logo">
+    <div class="formulario-logo">
       <img src="img/logo-hm-blanco-sinfondo.png" alt="Hernandez Motores Logo">
     </div>
 
-    <h1>Formulario de Reclamo</h1>
+    <!-- Título -->
+    <h1 class="formulario-titulo">Formulario de Reclamo</h1>
 
     <!-- Formulario -->
-    <form class="reclamo-form">
-      <div class="form-row">
-        <div class="form-group">
+    <form class="formulario-form">
+      <!-- Fila 1 -->
+      <div class="formulario-row">
+        <div class="formulario-group">
           <label for="rut">RUT Cliente:</label>
-          <input type="text" id="rut" name="rut" placeholder="Sin puntos, guion y número verificador" required>
+          <input type="text" id="rut" placeholder="Sin puntos, guion y número verificador" required>
         </div>
-        <div class="form-group">
-          <label for="nombre">Primer Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required>
+        <div class="formulario-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" required>
         </div>
-        <div class="form-group">
-          <label for="apellido">Primer Apellido:</label>
-          <input type="text" id="apellido" name="apellido" required>
+        <div class="formulario-group">
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" required>
         </div>
       </div>
 
-      <div class="form-row">
-        <div class="form-group">
+      <!-- Fila 2 -->
+      <div class="formulario-row">
+        <div class="formulario-group">
           <label for="correo">Correo Electrónico:</label>
-          <input type="email" id="correo" name="correo" required>
+          <input type="email" id="correo" required>
         </div>
-        <div class="form-group">
+        <div class="formulario-group">
           <label for="telefono">Teléfono:</label>
-          <input type="tel" id="telefono" name="telefono" required>
+          <input type="tel" id="telefono" required>
         </div>
-        <div class="form-group">
+        <div class="formulario-group">
           <label for="patente">Patente:</label>
-          <input type="text" id="patente" name="patente" required>
+          <input type="text" id="patente" required>
         </div>
       </div>
 
-      <div class="form-row">
-        <div class="form-group">
+      <!-- Fila 3 -->
+      <div class="formulario-row">
+        <div class="formulario-group">
           <label for="marca">Marca:</label>
-          <select id="marca" name="marca" required>
+          <select id="marca" required>
             <option value="">Seleccione una marca</option>
-            <option value="marca1">Marca 1</option>
-            <option value="marca2">Marca 2</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Chevrolet">Chevrolet</option>
           </select>
         </div>
-        <div class="form-group">
+        <div class="formulario-group">
           <label for="modelo">Modelo:</label>
-          <input type="text" id="modelo" name="modelo" required>
+          <input type="text" id="modelo" required>
         </div>
-        <div class="form-group">
+        <div class="formulario-group">
           <label for="anio">Año:</label>
-          <input type="number" id="anio" name="anio" required>
+          <input type="number" id="anio" required>
         </div>
       </div>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label for="vin">VIN:</label>
-          <input type="text" id="vin" name="vin" required>
-        </div>
-        <div class="form-group">
-          <label for="kilometraje">Kilometraje:</label>
-          <input type="number" id="kilometraje" name="kilometraje" required>
-        </div>
-        <div class="form-group">
-          <label for="sucursal">Sucursal:</label>
-          <select id="sucursal" name="sucursal" required>
-            <option value="">Seleccione una sucursal</option>
-            <option value="sucursal1">Sucursal 1</option>
-            <option value="sucursal2">Sucursal 2</option>
-          </select>
+      <!-- Fila 4 -->
+      <div class="formulario-row">
+        <div class="formulario-group">
+          <label for="detalle">Detalle del Reclamo:</label>
+          <textarea id="detalle" rows="5" placeholder="Ingrese detalles del reclamo" required></textarea>
         </div>
       </div>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label for="ejecutivo">Ejecutivo:</label>
-          <select id="ejecutivo" name="ejecutivo" required>
-            <option value="">Seleccione un ejecutivo</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="tipo-reclamo">Tipo Reclamo:</label>
-          <select id="tipo-reclamo" name="tipo-reclamo" required>
-            <option value="">Seleccione un tipo</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="detalle">Detalle:</label>
-        <textarea id="detalle" name="detalle" rows="5" placeholder="Ingrese detalles del reclamo" required></textarea>
-      </div>
-
-      <button type="submit">Enviar</button>
+      <!-- Botón Enviar -->
+      <button type="submit" class="formulario-btn">Enviar</button>
     </form>
   </div>
 </body>

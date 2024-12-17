@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción</title>
+    <link rel="stylesheet" href="css/encuesta.css">
+
+</head>
+<body>
+    <div class="encuesta-container">
+        <div class="encuesta-links">
+            <a class="link-salir" href="index.html">Salir</a>
+            <a class="link-salir" href="opciones.html">Volver</a>
+        </div>
+        
+        <!-- Logo corporativo -->
+        <div class="encuesta-logo">
+            <img src="img/logo-hm-blanco-sinfondo.png" alt="Logo Hernandez Motores">
+        </div>
+
+        <!-- Título -->
+        <h1 class="encuesta-titulo">Encuesta de Satisfacción</h1>
+
+        <!-- Formulario -->
+        <form id="formEncuesta" class="encuesta-formulario">
+            <!-- Fila 1 -->
+            <div class="encuesta-row">
+                <div class="encuesta-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="encuesta-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+                <div class="encuesta-group">
+                    <label for="rut">Rut:</label>
+                    <input type="number" id="rut" name="rut" required>
+                </div>
+            </div>
+            <!-- Fila 2 -->
+            <div class="encuesta-row">
+                <div class="encuesta-group">
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" name="celular" required>
+                </div>
+                <div class="encuesta-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="encuesta-group">
+                    <label for="marca">Marca:</label>
+                    <input type="text" id="marca" name="marca" required>
+                </div>
+            </div>
+            <!-- Fila 3 -->
+            <div class="encuesta-row">
+                <div class="encuesta-group">
+                    <label for="modelo">Modelo:</label>
+                    <input type="text" id="modelo" name="modelo" required>
+                </div>
+                <div class="encuesta-group">
+                    <label for="anio">Año:</label>
+                    <input type="number" id="anio" name="anio" required>
+                </div>
+                <div class="encuesta-group">
+                    <label for="patente">Patente:</label>
+                    <input type="text" id="patente" name="patente" required>
+                </div>
+            </div>
+            <!-- Escala de satisfacción -->
+            <div class="encuesta-group">
+                <label for="satisfaccion">¿Cómo calificarías tu experiencia? (1 - 10)</label>
+                <input type="range" id="satisfaccion" name="satisfaccion" min="1" max="10" value="5" oninput="valorSatisfaccion.innerText = this.value">
+                <p>Valor seleccionado: <span id="valorSatisfaccion">5</span></p>
+            </div>
+
+             <!-- Pregunta adicional -->
+             <div class="encuesta-group">
+                <label>¿Recomendarías a Hernandez Motores?</label>
+                <div class="encuesta-radio">
+                    <label><input type="radio" name="recomendacion" value="Si" onclick="toggleJustificacion(false)" required> Sí</label>
+                    <label><input type="radio" name="recomendacion" value="No" onclick="toggleJustificacion(true)" required> No</label>
+                </div>
+            </div>
+
+            <!-- Justificación si selecciona "No" -->
+            <div class="encuesta-group" id="justificacion-group" style="display: none;">
+                <label for="justificacion">¿Por qué no nos recomendarías?</label>
+                <textarea id="justificacion" name="justificacion" rows="5" placeholder="Ingrese detalles aquí"></textarea>
+            </div>
+
+            <!-- Comentarios -->
+            <div class="encuesta-group">
+                <label for="detalle">¿Por qué?:</label>
+                <textarea id="detalle" name="detalle" rows="5" placeholder="Ingrese detalles de la experiencia" required></textarea>
+            </div>
+            <!-- Botón de envío -->
+            <button type="submit" class="encuesta-boton">Enviar Encuesta</button>
+        </form>
+    </div>
+    
+</body>
+</html>
