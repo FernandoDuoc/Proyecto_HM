@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reclamo Externo</title>
+  <link rel="stylesheet" href="css/form_interno.css">
+</head>
+<body>
+  <div class="formulario-container">
+    <!-- Botones Cerrar y Volver -->
+    <div class="formulario-top-buttons">
+      <a href="index.html" class="formulario-btn-link">Cerrar</a>
+      <a href="reclamos.html" class="formulario-btn-link">Volver</a>
+    </div>
+
+    <!-- Logo -->
+    <div class="formulario-logo">
+      <img src="img/logo-hm-blanco-sinfondo.png" alt="Hernandez Motores Logo">
+    </div>
+
+    <!-- Título -->
+    <h1 class="formulario-titulo">Formulario de Reclamo Externo</h1>
+
+    <!-- Formulario -->
+    <form class="formulario-form">
+      <!-- Fila 1 -->
+      <div class="formulario-row">
+        <div class="formulario-group">
+            <label for="apellido">N° de Reclamo:</label>
+            <input type="text" id="apellido" required>
+          </div>
+        <div class="formulario-group">
+          <label for="rut">RUT Cliente:</label>
+          <input type="text" id="rut" placeholder="Sin puntos, guion y número verificador" required>
+        </div>
+        <div class="formulario-group">
+          <label for="nombre">Nombre Completo:</label>
+          <input type="text" id="nombre" required>
+        </div>
+      </div>
+
+      <!-- Fila 2 -->
+      <div class="formulario-row">
+        <div class="formulario-group">
+          <label for="correo">Correo Electrónico:</label>
+          <input type="email" id="correo" required>
+        </div>
+        <div class="formulario-group">
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" required>
+        </div>
+        <div class="formulario-group">
+          <label for="patente">Patente:</label>
+          <input type="text" id="patente" required>
+        </div>
+      </div>
+
+      <!-- Fila 3 -->
+      <div class="formulario-row">
+        <div class="formulario-group">
+          <label for="marca">Marca:</label>
+          <select id="marca" required>
+            <option value="">Seleccione una marca</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Chevrolet">Chevrolet</option>
+          </select>
+        </div>
+        <div class="formulario-group">
+          <label for="modelo">Modelo:</label>
+          <input type="text" id="modelo" required>
+        </div>
+        <div class="formulario-group">
+          <label for="anio">Año:</label>
+          <input type="number" id="anio" required>
+        </div>
+      </div>
+
+      <!-- Fila 4 -->
+      <div class="formulario-row">
+        <div class="formulario-group">
+          <label for="detalle">Detalle del Reclamo:</label>
+          <textarea id="detalle" rows="5" placeholder="Ingrese detalles del reclamo" required></textarea>
+        </div>
+      </div>
+
+      <!-- Botón Enviar -->
+      <button type="submit" class="formulario-btn">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>
